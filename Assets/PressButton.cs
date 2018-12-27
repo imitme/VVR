@@ -39,7 +39,8 @@ public class PressButton : MonoBehaviour ,
 
     public void OnColliderEventPressUp(ColliderButtonEventData eventData)
     {
-        
+        GameObject go = Instantiate(explosionEffect, explosionPosition.GetComponent<Transform>());
+        Destroy(go, 2.0f);        
     }
 
     public void OnColliderEventHoverEnter(ColliderHoverEventData eventData)
